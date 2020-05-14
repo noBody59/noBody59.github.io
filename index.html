@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .heart-shape {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: rgba(250, 184, 66, 1);
+        }
+
+        .heart-shape:before,
+        .heart-shape:after {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            content: '';
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            background-color: rgba(250, 184, 66, 1);
+        }
+
+        .heart-shape:before {
+            bottom: 0px;
+            left: -100px;
+        }
+
+        .heart-shape:after {
+            top: -100px;
+            right: 0px;
+        }
+
+        .card-wrap {
+            box-sizing: border-box;
+            position: relative;
+            padding: 20px;
+            margin: 20px 10px;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            transition: all .5s ease-in-out;
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+
+        }
+
+        .card-wrap:hover {
+            transform: scale(1.05);
+
+        }
+
+        .img {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            transform: rotate3d(0, 0, 0, -.5turn);
+            transition: all .7s ease-in-out;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            z-index: -10;
+
+        }
+
+        .card-wrap:hover>.img {
+            transform: rotate3d(0, .5, 0, .5turn);
+
+        }
+
+        .card-wrap:before {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            background: url(https://nakedsecurity.sophos.com/wp-content/uploads/sites/2/2019/04/shutterstock_407554567-compressor-1.jpg?resize=780,408);
+            background-size: cover;
+            border-radius: 50%;
+            ;
+            transition: all .7s ease-in-out;
+            transform: rotate3d(0, .5, 0, .5turn);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+
+        }
+
+        .card-wrap:hover:before {
+            transform: rotate3d(0, 0, 0, -.5turn);
+
+        }
+
+        .card-wrap:hover>.name {
+            transform: rotate3d(0, 0, 0, -.5turn) translateZ(-100px);
+
+        }
+
+        .card-wrap:hover>p {
+            transform: rotate3d(0, 0, 0, -.5turn) translateZ(-50px);
+
+        }
+
+        .name,
+        p {
+            transition: all .7s ease-in-out;
+            transform: rotate3d(0, .5, 0, .5turn);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            font-size: 35px;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="heart-shape"> -->
+
+        <div class="card-wrap">
+            <p class="name">I love you soo much &#128536;&#128536;</p>
+            <img class="img" src="./neelam.jpeg">
+        </div>
+
+    <!-- </div> -->
+
+
+</body>
+
+</html>
